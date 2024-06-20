@@ -1,8 +1,16 @@
 /** @type {import("eslint").Linter.Config} */
 
 const config = {
+  ignorePatterns: ["dist", ".eslintrc.cjs"],
   extends: [require.resolve("./recommended")],
+  plugins: ["react-refresh"],
   rules: {
+    "react/jsx-no-target-blank": "off",
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
+
     // TODO: Fix all the errors so we can turn this rule on :)
     "no-async-promise-executor": "off",
   },
