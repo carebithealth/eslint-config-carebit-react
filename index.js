@@ -36,11 +36,17 @@ export default [
     ],
   },
 
-  tseslint.config(
-    eslint.configs.recommended,
-    ...tseslint.configs.recommended,
-    ...tseslint.configs.stylistic
-  ),
+  ...tseslint.config({
+    files: ["**/*.ts", "**/*.tsx"],
+    extends: [
+      eslint.configs.recommended,
+      ...tseslint.configs.strict,
+      ...tseslint.configs.stylistic,
+    ],
+    rules: {
+      // New ts rules go here:
+    },
+  }),
 ];
 
 // /** @type {import("eslint").Linter.Config} */
