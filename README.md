@@ -17,13 +17,13 @@ The original `eslint-config-react-app` represents good standardized practices. K
 Install the package: (Replace `[git-commit-hash]` with the specific commit of the version to include.)
 
 ```
-yarn add eslint-config-carebit-react@git+ssh://git@github.com:carebithealth/eslint-config-carebit-react.git#[git-commit-hash]
+yarn add -D eslint-config-carebit-react@carebithealth/eslint-config-carebit-react#[git-commit-hash]
 ```
 
 This should create a line in `package.json` that looks like this:
 
 ```
-"eslint-config-carebit-react": "git+ssh://git@github.com:carebithealth/eslint-config-carebit-react.git#0581cdb3fc1a18d0a2866e1c7978f58f547a7e27",
+"eslint-config-carebit-react": "carebithealth/eslint-config-carebit-react#0581cdb3fc1a18d0a2866e1c7978f58f547a7e27",
 
 ```
 
