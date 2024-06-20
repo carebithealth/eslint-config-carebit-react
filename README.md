@@ -3,15 +3,14 @@ Copied from: https://github.com/facebook/create-react-app - `packages/eslint-con
 # Differences from original (eslint-config-react-app):
 
 - Updated all package versions
-- Moved all rule configurations from `index.js` -> `eslint-config-react-app.js`
+- Moved all rule configurations from `index.js` -> `recommended.js`
 - Created a new `index.js` for our own custom rules.
-- Created a `typescript.ts` for typescript specific rules.
 
 # Making changes
 
 Try to only make changes to `index.js` and `typescript.ts` when defining new rules.
 
-The original `eslint-config-react-app` represents good standardized practices. Keeping `eslint-config-react-app.js` unchanged gives us a good baseline and makes us define explicit exceptions when we deviate from the standard.
+The original `eslint-config-react-app` represents good standardized practices. Keeping `recommended.js` unchanged gives us a good baseline and makes us define explicit exceptions when we deviate from the standard.
 
 # Usage
 
