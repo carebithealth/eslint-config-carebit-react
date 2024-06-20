@@ -26,7 +26,7 @@ const restrictedGlobals = require("confusing-browser-globals");
 module.exports = {
   extends: [require.resolve("./base")],
 
-  plugins: ["import", "jsx-a11y", "react-hooks"],
+  plugins: ["import", "flowtype", "jsx-a11y", "react-hooks"],
 
   overrides: [
     {
