@@ -23,7 +23,19 @@ import testingLibraryPlugin from "eslint-plugin-testing-library";
 
 export default [
   {
+    ignores: ["node_modules/**"],
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+  },
+
+  {
     plugins: {
       jest: jestPlugin,
       jsdoc: jsdocPlugin,
@@ -34,7 +46,13 @@ export default [
       testingLibrary: testingLibraryPlugin,
     },
     rules: {
-      // New js rules go here:
+      ...reactPlugin.configs.recommended.rules,
+      ...reactHooksPlugin.configs.recommended.rules,
+      ...jestPlugin.configs.recommended.rules,
+      ...testingLibraryPlugin.configs.recommended.rules,
+      ...jsx11yPlugin.configs.recommended.rules,
+      ...reactRefreshPlugin.configs.recommended.rules,
+      ...jsdocPlugin.configs.recommended.rules,
     },
   },
 
