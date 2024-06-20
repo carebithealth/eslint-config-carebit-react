@@ -13,7 +13,6 @@ import tseslint from "typescript-eslint";
 // "eslint-plugin-react-refresh": "^0.4.7",
 // "eslint-plugin-testing-library": "^6.2.2",
 
-import flowtypePlugin from "eslint-plugin-flowtype";
 import jestPlugin from "eslint-plugin-jest";
 import jsdocPlugin from "eslint-plugin-jsdoc";
 import jsx11yPlugin from "eslint-plugin-jsx-a11y";
@@ -24,16 +23,19 @@ import testingLibraryPlugin from "eslint-plugin-testing-library";
 
 export default [
   {
-    plugins: [
-      flowtypePlugin,
-      jestPlugin,
-      jsdocPlugin,
-      jsx11yPlugin,
-      reactPlugin,
-      reactHooksPlugin,
-      reactRefreshPlugin,
-      testingLibraryPlugin,
-    ],
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+    plugins: {
+      jest: jestPlugin,
+      jsdoc: jsdocPlugin,
+      jsx11y: jsx11yPlugin,
+      react: reactPlugin,
+      reactHooks: reactHooksPlugin,
+      reactRefresh: reactRefreshPlugin,
+      testingLibrary: testingLibraryPlugin,
+    },
+    rules: {
+      // New js rules go here:
+    },
   },
 
   ...tseslint.config({
