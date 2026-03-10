@@ -12,3 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 /.changelog
 .npm/
+
+# Yarn Berry
+.pnp.*
+.yarn/install-state.gz
